@@ -2,7 +2,7 @@
   <div class="fluid container">  
 <div class="container">
 <div class="row">
-  <div class="col-lg-6">
+  <div class="col-lg-5 col-md-5">
     <div class="row raft">
       <draggable element="span" v-model="list2" v-bind="dragOptions" :move="onMove">
         <transition-group name="no" class="list-group" tag="ul">
@@ -86,24 +86,25 @@
       <draggable element="span" v-model="list9" v-bind="dragOptions" :move="onMove">
         <transition-group name="no" class="list-group" tag="ul">
           <li class="list-group-item" v-for="element in list9" :key="element.order">
-            <i :class="element.fixed? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>
-            {{element.name}}
+            <i class="ikona" :class="element.fixed? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>
+            <img class="konkurenti" :src='element.name' />
             <span class="badge">{{element.order}}</span>
           </li>
         </transition-group>
       </draggable>
     </div>
     </div>
-      <div class="col-lg-6">
+
+  <div class="col-md-6 col-lg-6">
     
     <div class="row  test">
       <draggable class="list-group" tag="ul" v-model="list" v-bind="dragOptions" :move="onMove" @start="isDragging=true" @end="isDragging=false">
         <transition-group type="transition" :name="'flip-list'">
-          <li class="list-group-item" v-for="element in list" :key="element.order">
-            <i :class="element.fixed? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>
-            {{element.name}}
+          <div class="col-md-6 col-lg-6  list-group-item" v-for="element in list" :key="element.order">
+            <i class="ikona" :class="element.fixed? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>
+            <img class="konkurenti" :src='element.name' />
             <span class="badge">{{element.order}}</span>
-          </li>
+          </div>
         </transition-group>
       </draggable>
     </div>
@@ -113,31 +114,27 @@
   </div>
 
 
-
-
-
-
-
-    <div class="list-group col-md-3">
+    <div class="list-group col-lg-6 col-md-6">
       <pre>{{listString}}</pre>
     </div>
-    <div class="list-group col-md-3">
+    <div class="list-group col-lg-6 col-md-6">
       <pre>{{list2String}}</pre>
     </div>
+
   </div>
 </template>
 
 <script>
 import draggable from "vuedraggable";
 const message = [
-  "vue.draggable",
-  "draggable",
-  "component",
-  "for",
-  "vue.js 2.0",
-  "based",
-  "on",
-  "Sortablejs"
+  "https://fshp.al/drag/images/1.png",
+  "https://fshp.al/drag/images/1.png",
+  "https://fshp.al/drag/images/1.png",
+  "https://fshp.al/drag/images/1.png",
+  "https://fshp.al/drag/images/1.png",
+  "https://fshp.al/drag/images/1.png",
+  "https://fshp.al/drag/images/1.png",
+  "https://fshp.al/drag/images/1.png"
 ];
 
 export default {
@@ -208,9 +205,11 @@ export default {
 </script>
 
 <style>
-.test{
-  background-color: red;
+
+.konkurenti{
+  max-width:170px;
 }
+
 body{
   background: #ffcccb !important;
 }
@@ -236,6 +235,7 @@ body{
 .list-group {
   min-height: 20px;
   margin-top:20px;
+  text-align-last: center;
 }
 
 .list-group-item {
@@ -244,5 +244,7 @@ body{
 
 .list-group-item i {
   cursor: pointer;
+  font-size:20px;
+  float:left;
 }
 </style>
