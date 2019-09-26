@@ -2,13 +2,13 @@
   <div class="fluid container">  
 <div class="container">
 <div class="row">
-  <div class="col-lg-5 col-md-5">
+  <div class="col-lg-5 col-md-5 col-sm-5">
     <div class="row raft">
       <draggable element="span" v-model="list2" v-bind="dragOptions" :move="onMove">
         <transition-group name="no" class="list-group" tag="ul">
-          <li class="list-group-item" v-for="element in list2" :key="element.order">
+          <li class="list-group-item-left" v-for="element in list2" :key="element.order">
             <i :class="element.fixed? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>
-            {{element.name}}
+            <img class="konkurenti-left" :src='element.name' />
             <span class="badge">{{element.order}}</span>
           </li>
         </transition-group>
@@ -19,9 +19,9 @@
        <div class="row raft">
       <draggable element="span" v-model="list3" v-bind="dragOptions" :move="onMove">
         <transition-group name="no" class="list-group" tag="ul">
-          <li class="list-group-item" v-for="element in list3" :key="element.order">
+          <li class="list-group-item-left" v-for="element in list3" :key="element.order">
             <i :class="element.fixed? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>
-            {{element.name}}
+            <img class="konkurenti-left" :src='element.name' />
             <span class="badge">{{element.order}}</span>
           </li>
         </transition-group>
@@ -30,9 +30,9 @@
         <div class="row raft">
       <draggable element="span" v-model="list4" v-bind="dragOptions" :move="onMove">
         <transition-group name="no" class="list-group" tag="ul">
-          <li class="list-group-item" v-for="element in list4" :key="element.order">
+          <li class="list-group-item-left" v-for="element in list4" :key="element.order">
             <i :class="element.fixed? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>
-            {{element.name}}
+            <img class="konkurenti-left" :src='element.name' />
             <span class="badge">{{element.order}}</span>
           </li>
         </transition-group>
@@ -41,9 +41,9 @@
         <div class="row raft">
       <draggable element="span" v-model="list5" v-bind="dragOptions" :move="onMove">
         <transition-group name="no" class="list-group" tag="ul">
-          <li class="list-group-item" v-for="element in list5" :key="element.order">
+          <li class="list-group-item-left" v-for="element in list5" :key="element.order">
             <i :class="element.fixed? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>
-            {{element.name}}
+            <img class="konkurenti-left" :src='element.name' />
             <span class="badge">{{element.order}}</span>
           </li>
         </transition-group>
@@ -52,9 +52,9 @@
         <div class="row raft">
       <draggable element="span" v-model="list6" v-bind="dragOptions" :move="onMove">
         <transition-group name="no" class="list-group" tag="ul">
-          <li class="list-group-item" v-for="element in list6" :key="element.order">
+          <li class="list-group-item-left" v-for="element in list6" :key="element.order">
             <i :class="element.fixed? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>
-            {{element.name}}
+            <img class="konkurenti-left" :src='element.name' />
             <span class="badge">{{element.order}}</span>
           </li>
         </transition-group>
@@ -63,9 +63,9 @@
         <div class="row raft">
       <draggable element="span" v-model="list7" v-bind="dragOptions" :move="onMove">
         <transition-group name="no" class="list-group" tag="ul">
-          <li class="list-group-item" v-for="element in list7" :key="element.order">
+          <li class="list-group-item-left" v-for="element in list7" :key="element.order">
             <i :class="element.fixed? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>
-            {{element.name}}
+            <img class="konkurenti-left" :src='element.name' />
             <span class="badge">{{element.order}}</span>
           </li>
         </transition-group>
@@ -74,9 +74,9 @@
         <div class="row raft">
       <draggable element="span" v-model="list8" v-bind="dragOptions" :move="onMove">
         <transition-group name="no" class="list-group" tag="ul">
-          <li class="list-group-item" v-for="element in list8" :key="element.order">
+          <li class="list-group-item-left" v-for="element in list8" :key="element.order">
             <i :class="element.fixed? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>
-            {{element.name}}
+            <img class="konkurenti-left" :src='element.name' />
             <span class="badge">{{element.order}}</span>
           </li>
         </transition-group>
@@ -85,9 +85,9 @@
         <div class="row raft">
       <draggable element="span" v-model="list9" v-bind="dragOptions" :move="onMove">
         <transition-group name="no" class="list-group" tag="ul">
-          <li class="list-group-item" v-for="element in list9" :key="element.order">
+          <li class="list-group-item-left" v-for="element in list9" :key="element.order">
             <i class="ikona" :class="element.fixed? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>
-            <img class="konkurenti" :src='element.name' />
+            <img class="konkurenti-left" :src='element.name' />
             <span class="badge">{{element.order}}</span>
           </li>
         </transition-group>
@@ -95,15 +95,15 @@
     </div>
     </div>
 
-  <div class="col-md-6 col-lg-6">
-    
+  <div class="col-md-7 col-lg-7 col-sm-7">
+    <div v-if="listString.length==2">Urrraaaaa</div>
     <div class="row  test">
       <draggable class="list-group" tag="ul" v-model="list" v-bind="dragOptions" :move="onMove" @start="isDragging=true" @end="isDragging=false">
         <transition-group type="transition" :name="'flip-list'">
-          <div class="col-md-6 col-lg-6  list-group-item" v-for="element in list" :key="element.order">
+          <div class="col-md-6 col-lg-6 col-sm-6  list-group-item.right" v-for="element in list" :key="element.order">
             <i class="ikona" :class="element.fixed? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>
             <img class="konkurenti" :src='element.name' />
-            <span class="badge">{{element.order}}</span>
+            
           </div>
         </transition-group>
       </draggable>
@@ -114,12 +114,15 @@
   </div>
 
 
+<!--
     <div class="list-group col-lg-6 col-md-6">
       <pre>{{listString}}</pre>
     </div>
     <div class="list-group col-lg-6 col-md-6">
       <pre>{{list2String}}</pre>
     </div>
+-->
+<div v-if="listString.length==2">Urrraaaaa</div>
 
   </div>
 </template>
@@ -127,14 +130,14 @@
 <script>
 import draggable from "vuedraggable";
 const message = [
-  "https://fshp.al/drag/images/1.png",
-  "https://fshp.al/drag/images/1.png",
-  "https://fshp.al/drag/images/1.png",
-  "https://fshp.al/drag/images/1.png",
-  "https://fshp.al/drag/images/1.png",
-  "https://fshp.al/drag/images/1.png",
-  "https://fshp.al/drag/images/1.png",
-  "https://fshp.al/drag/images/1.png"
+  "./img/1.png",
+  "./img/1.png",
+  "./img/1.png",
+  "./img/1.png",
+  "./img/1.png",
+  "./img/1.png",
+  "./img/1.png",
+  "./img/1.png"
 ];
 
 export default {
@@ -205,9 +208,23 @@ export default {
 </script>
 
 <style>
+.list-group-item.right {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.list-group-item-left{
+list-style: none;
 
+}
+.konkurenti-left{
+  max-height: 70px;
+}
 .konkurenti{
-  max-width:170px;
+  max-width:200px;
 }
 
 body{
@@ -233,9 +250,9 @@ body{
 }
 
 .list-group {
-  min-height: 20px;
-  margin-top:20px;
-  text-align-last: center;
+  min-height: 30px;
+  margin:0 !important;
+
 }
 
 .list-group-item {
