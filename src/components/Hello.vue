@@ -96,7 +96,7 @@
     </div>
 
   <div class="col-md-7 col-lg-7 col-sm-7">
-    <div v-if="listString.length==2">Urrraaaaa</div>
+   <div v-if="listString.length==2"><mesazhi></mesazhi></div>
     <div class="row  test">
       <draggable class="list-group" tag="ul" v-model="list" v-bind="dragOptions" :move="onMove" @start="isDragging=true" @end="isDragging=false">
         <transition-group type="transition" :name="'flip-list'">
@@ -122,7 +122,7 @@
       <pre>{{list2String}}</pre>
     </div>
 -->
-<div v-if="listString.length==2">Urrraaaaa</div>
+
 
   </div>
 </template>
