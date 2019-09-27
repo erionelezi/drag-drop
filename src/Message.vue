@@ -1,5 +1,5 @@
 <template>
     <div>
-       <img src="img/giphy.gif"> <h1>Mesazhi komponent i ri</h1>
+       <img src="img/giphy.gif">
     </div>
 </template>
