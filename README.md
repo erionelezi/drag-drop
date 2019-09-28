@@ -1,12 +1,12 @@
 # draggable-example
 
-> Example usage of [vue.draggable](https://github.com/SortableJS/Vue.Draggable)
+> Example usage of [Vizion Plus Drag Drop #KKT (Këndo këngën time)](www.vizionplus.tv)
 
-![demo gif](example.gif)
+![demo jpg](kkt.jpg)
 
 ## Live demo
 
-https://david-desmaisons.github.io/draggable-example/
+https://www.vizionplus.tv 
 
 ## Build Setup
 
