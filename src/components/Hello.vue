@@ -84,11 +84,14 @@
       </draggable>
     </div>
     </div>
-
+<div v-if="end=false"><h1>ererere </h1></div>
   <div class="col-md-7 col-lg-7 col-sm-7">
+    <button class="btn btn-primary btn-sm" @click.prevent="playSound('./tiktik/1.wav')"><span class="fa fa-play-circle-o"></span></button>
    <div v-if="listString.length==2"><mesazhi></mesazhi></div>
+   
+   
     <div class="row  test">
-      <draggable class="list-group" tag="ul" v-model="list" v-bind="dragOptions" :move="onMove" @start="isDragging=true" @end="isDragging=false">
+      <draggable class="list-group" tag="ul" v-model="list" v-bind="dragOptions" :move="onMove" @start="isDragging=true" @end="isDragging=false" >
         <transition-group type="transition" :name="'flip-list'">
           <div class="col-md-6 col-lg-6 col-sm-6  list-group-item.right" v-for="element in list" :key="element.order">          
             <img class="konkurenti" :src='element.name' />            
@@ -119,13 +122,13 @@
 import draggable from "vuedraggable";
 const message = [
   "./img/1.png",
-  "./img/1.png",
-  "./img/1.png",
-  "./img/1.png",
-  "./img/1.png",
-  "./img/1.png",
-  "./img/1.png",
-  "./img/1.png"
+  "./img/2.png",
+  "./img/3.png",
+  "./img/4.png",
+  "./img/5.png",
+  "./img/6.png",
+  "./img/7.png",
+  "./img/8.png"
 ];
 
 export default {
@@ -157,6 +160,12 @@ export default {
         return one.order - two.order;
       });
     },
+    playSound (sound) {
+      if(sound) {
+        var audio = new Audio(sound);
+        audio.play();
+      }
+    },
     onMove({ relatedContext, draggedContext }) {
       const relatedElement = relatedContext.element;
       const draggedElement = draggedContext.element;
@@ -171,7 +180,7 @@ export default {
         animation: 0,
         group: "description",
         disabled: !this.editable,
-        ghostClass: "ghost"
+        ghostClass: "ghost",
       };
     },
     listString() {
@@ -213,10 +222,15 @@ list-style: none;
 }
 .konkurenti{
   max-width:200px;
+  max-height:200px;
 }
 
 body{
-  background: #ffcccb !important;
+  background-image: url("/img/background.png");
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 .raft{
     border-bottom: 20px solid #7d007d;
